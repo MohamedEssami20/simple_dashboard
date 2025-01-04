@@ -1,7 +1,8 @@
-import 'package:flutter/material.dart';
 
+import 'package:flutter/material.dart';
 import '../helper/constant.dart';
 import '../helper/font_styles.dart';
+import 'drawer_item.dart';
 
 class CsutsomDrawer extends StatelessWidget {
   const CsutsomDrawer({super.key});
@@ -9,7 +10,7 @@ class CsutsomDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 340,
+      padding: const EdgeInsets.symmetric(horizontal: 35),
       height: double.infinity,
       color: Constant.primaryColor,
       child: Column(
@@ -33,11 +34,12 @@ class CsutsomDrawer extends StatelessWidget {
               ],
             ),
           ),
-           const SizedBox(height: 62,), 
+          const SizedBox(
+            height: 62,
+          ),
+          const DrawerItem(),
         ],
       ),
     );
   }
 }
-
-

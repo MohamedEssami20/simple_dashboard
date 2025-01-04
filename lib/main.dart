@@ -12,6 +12,7 @@ class Dashboard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: const DashboardView(),
       theme: ThemeData(
         fontFamily: GoogleFonts.poppins().fontFamily,

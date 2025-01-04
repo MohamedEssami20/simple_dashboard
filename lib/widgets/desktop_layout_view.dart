@@ -6,19 +6,23 @@ class DesktopLayoutView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
+    return Row(
       children: [
-        Expanded(
-          flex: 1,
+        const Expanded(
+          flex: 2,
           child: CsutsomDrawer(),
         ),
         Expanded(
-          flex: 3,
-          child: SizedBox(),
+          flex: 5,
+          child: Container(
+            color: Colors.red,
+          ),
         ),
         Expanded(
-          flex: 1,
-          child: SizedBox(),
+          flex: 2,
+          child: Container(
+            color: Colors.green,
+          ),
         ),
       ],
     );
