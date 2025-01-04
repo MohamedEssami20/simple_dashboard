@@ -13,7 +13,7 @@ class DesktopLayoutView extends StatelessWidget {
           child: CsutsomDrawer(),
         ),
         Expanded(
-          flex: 5,
+          flex: 6,
           child: Container(
             color: Colors.red,
           ),
