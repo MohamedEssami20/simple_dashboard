@@ -1,6 +1,6 @@
-
 import 'package:dashboard_two/views/dashboard_view.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(const Dashboard());
@@ -11,8 +11,11 @@ class Dashboard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: DashboardView()
+    return MaterialApp(
+      home: const DashboardView(),
+      theme: ThemeData(
+        fontFamily: GoogleFonts.poppins().fontFamily,
+      ),
     );
   }
 }

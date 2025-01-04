@@ -9,8 +9,8 @@ class DesktopLayoutView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Text(
-        'Desktop Layout',
-        style: FontStyles().regular18(context),
+        'Hello, Patricia',
+        style: FontStyles().bold36(context),
       ),
     );
   }
