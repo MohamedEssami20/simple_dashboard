@@ -1,17 +1,26 @@
+import 'package:dashboard_two/widgets/custom_drawer.dart';
 import 'package:flutter/material.dart';
-
-import '../helper/font_styles.dart';
 
 class DesktopLayoutView extends StatelessWidget {
   const DesktopLayoutView({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text(
-        'Hello, Patricia',
-        style: FontStyles().bold36(context),
-      ),
+    return const Row(
+      children: [
+        Expanded(
+          flex: 1,
+          child: CsutsomDrawer(),
+        ),
+        Expanded(
+          flex: 3,
+          child: SizedBox(),
+        ),
+        Expanded(
+          flex: 1,
+          child: SizedBox(),
+        ),
+      ],
     );
   }
 }

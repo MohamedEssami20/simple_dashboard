@@ -15,6 +15,7 @@ class Dashboard extends StatelessWidget {
       home: const DashboardView(),
       theme: ThemeData(
         fontFamily: GoogleFonts.poppins().fontFamily,
+        scaffoldBackgroundColor: const Color(0xFFF5F5F5),
       ),
     );
   }
