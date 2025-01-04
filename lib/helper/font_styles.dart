@@ -1,77 +1,126 @@
 import 'package:flutter/material.dart';
 
 class FontStyles {
-   TextStyle regular14(BuildContext context) {
+   TextStyle regular18(BuildContext context) {
     return  TextStyle(
-      fontSize: getResponsiveText(context, 14),
+      fontSize: getResponsiveText(context, 18),
       color: Colors.black,
-      fontFamily: "Aeonik Pro TRIAL",
+      fontFamily: "Poppins",
       fontWeight: FontWeight.w400,
     );
   }
 
-TextStyle regular12(BuildContext context) {
+
+TextStyle medium18(BuildContext context) {
   return TextStyle(
-    fontSize: getResponsiveText(context, 12),
+    fontSize: getResponsiveText(context, 18),
     color: Colors.black,
-    fontFamily: "Aeonik Pro TRIAL",
+    fontFamily: "Poppins",
+    fontWeight: FontWeight.w500,
+  );
+}
+
+TextStyle medium14(BuildContext context) {
+  return TextStyle(
+    fontSize: getResponsiveText(context, 14),
+    color: Colors.black,
+    fontFamily: "Poppins",
+    fontWeight: FontWeight.w500,
+  );
+}
+
+TextStyle bold24(BuildContext context) {
+  return TextStyle(
+    fontSize: getResponsiveText(context, 24),
+    color: Colors.black,
+    fontFamily: "Poppins",
+    fontWeight: FontWeight.w700,
+  );
+}
+
+TextStyle regular14(BuildContext context) {
+  return TextStyle(
+    fontSize: getResponsiveText(context, 14),
+    color: Colors.black,
+    fontFamily: "Poppins",
     fontWeight: FontWeight.w400,
   );
 }
 
-TextStyle regular22(BuildContext context) {
+TextStyle regular11(BuildContext context) {
   return TextStyle(
-    fontSize: getResponsiveText(context, 22),
+    fontSize: getResponsiveText(context, 11),
     color: Colors.black,
-    fontFamily: "Aeonik Pro TRIAL",
+    fontFamily: "Poppins",
     fontWeight: FontWeight.w400,
   );
 }
 
-TextStyle regular9(BuildContext context) {
+TextStyle semiBold18(BuildContext context) {
   return TextStyle(
-    fontSize: getResponsiveText(context, 9),
+    fontSize: getResponsiveText(context, 18),
     color: Colors.black,
-    fontFamily: "Aeonik Pro TRIAL",
-    fontWeight: FontWeight.w400,
+    fontFamily: "Poppins",
+    fontWeight: FontWeight.w600,
   );
 }
 
-TextStyle regular16(BuildContext context) {
+TextStyle bold18(BuildContext context) {
   return TextStyle(
-    fontSize: getResponsiveText(context, 16),
+    fontSize: getResponsiveText(context, 18),
     color: Colors.black,
-    fontFamily: "Aeonik Pro TRIAL",
-    fontWeight: FontWeight.w400,
+    fontFamily: "Poppins",
+    fontWeight: FontWeight.w700,
   );
 }
 
-TextStyle regular10(BuildContext context) {
-  return TextStyle(
-    fontSize: getResponsiveText(context, 10),
-    color: Colors.black,
-    fontFamily: "Aeonik Pro TRIAL",
-    fontWeight: FontWeight.w400,
-  );
-}
-
-TextStyle regular28(BuildContext context) {
-  return TextStyle(
-    fontSize: getResponsiveText(context, 28),
-    color: Colors.black,
-    fontFamily: "Aeonik Pro TRIAL",
-    fontWeight: FontWeight.w400,
-  );
-}
-
-TextStyle regular32(BuildContext context) {
+TextStyle bold32(BuildContext context) {
   return TextStyle(
     fontSize: getResponsiveText(context, 32),
     color: Colors.black,
-    fontFamily: "Aeonik Pro TRIAL",
-    fontWeight: FontWeight.w400,
+    fontFamily: "Poppins",
+    fontWeight: FontWeight.w700,
   );
 }
+
+
+TextStyle bold36(BuildContext context) {
+  return TextStyle(
+    fontSize: getResponsiveText(context, 36),
+    color: Colors.black,
+    fontFamily: "Poppins",
+    fontWeight: FontWeight.w700,
+  );
+}
+
+TextStyle semiBold14(BuildContext context) {
+  return TextStyle(
+    fontSize: getResponsiveText(context, 14),
+    color: Colors.black,
+    fontFamily: "Poppins",
+    fontWeight: FontWeight.w600,
+  );
+}
+
+TextStyle bold40(BuildContext context) {
+  return TextStyle(
+    fontSize: getResponsiveText(context, 40),
+    color: Colors.black,
+    fontFamily: "Poppins",
+    fontWeight: FontWeight.w700,
+  );
+}
+
+TextStyle medium24(BuildContext context) {
+  return TextStyle(
+    fontSize: getResponsiveText(context, 24),
+    color: Colors.black,
+    fontFamily: "Poppins",
+    fontWeight: FontWeight.w500,
+  );
+}
+
+
 
   double getResponsiveText(BuildContext context, double fontSize) {
     double scaleFactor = getScaleFactor(context);

@@ -17,3 +17,21 @@ class DashboardView extends StatelessWidget {
     );
   }
 }
+
+class CsutsomDrawer extends StatelessWidget {
+  const CsutsomDrawer({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return  Container(
+      width: 200,
+      height: double.infinity,
+      color: Colors.black,
+      child: Column(
+        children: [
+        
+      ]),
+    );
+  }
+}
+
