@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../helper/constant.dart';
 import '../helper/font_styles.dart';
+import 'category_section.dart';
 import 'dashboard_header.dart';
 
 class DashboardSection extends StatelessWidget {
@@ -24,7 +25,16 @@ class DashboardSection extends StatelessWidget {
         SliverToBoxAdapter(
           child: BannerWidget(),
         ),
+        SliverToBoxAdapter(
+          child: SizedBox(
+            height: 40,
+          ),
+        ),
+        SliverToBoxAdapter(
+          child: CategorySection(),
+        ),
       ],
     );
   }
 }
+
