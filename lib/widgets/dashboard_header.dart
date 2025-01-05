@@ -1,3 +1,4 @@
+import 'package:dashboard_two/widgets/custom_text_field.dart';
 import 'package:flutter/material.dart';
 
 import '../helper/font_styles.dart';
@@ -8,6 +9,8 @@ class DashboardHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisSize: MainAxisSize.max,
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(
           'Hello, Patricia',
@@ -15,6 +18,8 @@ class DashboardHeader extends StatelessWidget {
                 color: const Color(0xFF2E2E2E),
               ),
         ),
+        const SizedBox(width: 200),
+        const Expanded(child: CustomTextField()),
       ],
     );
   }
