@@ -23,7 +23,8 @@ class UpgradeCard extends StatelessWidget {
         child: Stack(
           children: [
             Positioned(
-              child: Row(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   FittedBox(
@@ -34,30 +35,25 @@ class UpgradeCard extends StatelessWidget {
                           ),
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.only(right: 16, bottom: 16),
-                    child: SvgPicture.asset(Assets.assetsIconsVectorDots),
+                  ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(2),
+                        ),
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 22,
+                        )),
+                    onPressed: () {},
+                    child: Text(
+                      'Upgrade',
+                      style: FontStyles().semiBold14(context).copyWith(),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 8,
                   ),
                 ],
-              ),
-            ),
-            Positioned(
-              bottom: 20,
-              child: Container(
-                padding: const EdgeInsets.symmetric(horizontal: 16),
-                height: 45,
-                decoration: ShapeDecoration(
-                  color: Colors.white,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(8),
-                  ),
-                ),
-                child: Center(
-                  child: Text(
-                    'Upgrade Now',
-                    style: FontStyles().semiBold14(context).copyWith(),
-                  ),
-                ),
               ),
             ),
             Positioned(
@@ -65,6 +61,16 @@ class UpgradeCard extends StatelessWidget {
               right: 0,
               child: SvgPicture.asset(
                 Assets.assetsIconsCruveCard,
+              ),
+            ),
+            Positioned(
+              top: 0,
+              right: 0,
+              child: Padding(
+                padding: const EdgeInsets.only(right: 16, bottom: 16),
+                child: SvgPicture.asset(
+                  Assets.assetsIconsVectorDots,
+                ),
               ),
             ),
           ],
