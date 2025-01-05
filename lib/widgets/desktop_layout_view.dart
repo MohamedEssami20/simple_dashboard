@@ -1,6 +1,8 @@
 import 'package:dashboard_two/widgets/custom_drawer.dart';
 import 'package:flutter/material.dart';
 
+import 'dashboard_header.dart';
+
 class DesktopLayoutView extends StatelessWidget {
   const DesktopLayoutView({super.key});
 
@@ -12,10 +14,14 @@ class DesktopLayoutView extends StatelessWidget {
           flex: 2,
           child: CsutsomDrawer(),
         ),
-        Expanded(
+        const Expanded(
           flex: 6,
-          child: Container(
-            color: Colors.red,
+          child: Padding(
+            padding: EdgeInsets.symmetric(
+              horizontal: 40,
+              vertical: 56,
+            ),
+            child: DashboardSection(),
           ),
         ),
         Expanded(
@@ -23,6 +29,21 @@ class DesktopLayoutView extends StatelessWidget {
           child: Container(
             color: Colors.green,
           ),
+        ),
+      ],
+    );
+  }
+}
+
+class DashboardSection extends StatelessWidget {
+  const DashboardSection({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const CustomScrollView(
+      slivers: [
+        SliverToBoxAdapter(
+          child: DashboardHeader(),
         ),
       ],
     );
