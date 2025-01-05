@@ -1,6 +1,9 @@
+import 'package:dashboard_two/helper/assets.dart';
+import 'package:dashboard_two/widgets/banner.dart';
 import 'package:flutter/material.dart';
-
+import 'package:flutter_svg/flutter_svg.dart';
 import '../helper/constant.dart';
+import '../helper/font_styles.dart';
 import 'dashboard_header.dart';
 
 class DashboardSection extends StatelessWidget {
@@ -19,26 +22,9 @@ class DashboardSection extends StatelessWidget {
           ),
         ),
         SliverToBoxAdapter(
-          child: Banner(),
+          child: BannerWidget(),
         ),
       ],
-    );
-  }
-}
-
-class Banner extends StatelessWidget {
-  const Banner({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 240,
-      decoration: ShapeDecoration(
-        color: Constant.secondaryColor,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(16),
-        ),
-      ),
     );
   }
 }
