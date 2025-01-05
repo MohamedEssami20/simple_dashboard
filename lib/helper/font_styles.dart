@@ -108,7 +108,7 @@ class FontStyles {
   double getResponsiveText(BuildContext context, double fontSize) {
     double scaleFactor = getScaleFactor(context);
     double responsiveFontSize = fontSize * scaleFactor;
-    double lowerLimit = fontSize * 0.8;
+    double lowerLimit = fontSize * 0.7;
     double upperLimit = fontSize * 1.2;
     double result = responsiveFontSize.clamp(lowerLimit, upperLimit);
     return result;
@@ -117,11 +117,11 @@ class FontStyles {
   double getScaleFactor(BuildContext context) {
     double width = MediaQuery.sizeOf(context).width;
     if (width < 600) {
-      return width / 400;
+      return width / 480;
     } else if (width < 900) {
       return width / 700;
     } else {
-      return width / 1500;
+      return width / 1600;
     }
   }
 }

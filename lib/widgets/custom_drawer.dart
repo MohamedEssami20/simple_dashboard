@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../helper/constant.dart';
 import '../helper/font_styles.dart';
 import 'drawer_item_list_view.dart';
+import 'upgrade_card.dart';
 
 class CsutsomDrawer extends StatelessWidget {
   const CsutsomDrawer({super.key});
@@ -39,10 +40,12 @@ class CsutsomDrawer extends StatelessWidget {
               height: 62,
             ),
             const DrawerItemListView(),
+            const SizedBox(height: 56),
+            const UpgradeCard(),
+            const SizedBox(height: 56),
           ],
         ),
       ),
     );
   }
 }
-

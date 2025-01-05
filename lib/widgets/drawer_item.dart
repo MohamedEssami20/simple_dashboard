@@ -14,7 +14,6 @@ class DrawerItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 252,
       padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
       decoration: ShapeDecoration(
         color: isSelected ? Constant.secondaryColor : Colors.transparent,
@@ -27,28 +26,34 @@ class DrawerItem extends StatelessWidget {
             blurRadius: 50,
             offset: Offset(0, 20),
             spreadRadius: 0,
-          )
+          ),
         ],
       ),
-      child: Row(
-        mainAxisSize: MainAxisSize.min,
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          SvgPicture.asset(
-            icon,
-            colorFilter: ColorFilter.mode(
-              isSelected ? Colors.white : Constant.drawerColor,
-              BlendMode.srcIn,
+      child: FittedBox(
+        fit: BoxFit.scaleDown,
+        alignment: AlignmentDirectional.centerStart,
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            SvgPicture.asset(
+              icon,
+              width: 40,
+              height: 40,
+              colorFilter: ColorFilter.mode(
+                isSelected ? Colors.white : Constant.drawerColor,
+                BlendMode.srcIn,
+              ),
             ),
-          ),
-          const SizedBox(width: 24),
-          Text(
-            title,
-            style: FontStyles().medium18(context).copyWith(
-                  color: isSelected ? Colors.white : Constant.drawerColor,
-                ),
-          ),
-        ],
+            const SizedBox(width: 20),
+            Text(
+              title,
+              style: FontStyles().medium18(context).copyWith(
+                    color: isSelected ? Colors.white : Constant.drawerColor,
+                  ),
+            ),
+          ],
+        ),
       ),
     );
   }
