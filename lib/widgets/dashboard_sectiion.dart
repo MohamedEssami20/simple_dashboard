@@ -1,4 +1,5 @@
 import 'package:dashboard_two/widgets/banner.dart';
+import 'package:dashboard_two/widgets/recent_order.dart';
 import 'package:flutter/material.dart';
 import 'category_section.dart';
 import 'dashboard_header.dart';
@@ -38,7 +39,15 @@ class DashboardSection extends StatelessWidget {
         SliverToBoxAdapter(
           child: PopularDishes(),
         ),
+        SliverToBoxAdapter(
+          child: SizedBox(
+            height: 40,
+          ),
+        ),
+        SliverToBoxAdapter(
+          child: RecentOrder(),
+        ),
       ],
-    );
+    ); 
   }
 }

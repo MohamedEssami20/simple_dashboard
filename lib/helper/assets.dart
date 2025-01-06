@@ -74,9 +74,21 @@ class Assets {
   /// assets/icons/order_history_icon.svg
   static const String assetsIconsOrderHistoryIcon = "assets/icons/order_history_icon.svg";
 
+  /// Assets for assetsIconsPizza1
+  /// assets/icons/pizza1.png
+  static const String assetsIconsPizza1 = "assets/icons/pizza1.png";
+
+  /// Assets for assetsIconsPizza2
+  /// assets/icons/pizza2.png
+  static const String assetsIconsPizza2 = "assets/icons/pizza2.png";
+
   /// Assets for assetsIconsPizzaIcon
   /// assets/icons/pizza_icon.svg
   static const String assetsIconsPizzaIcon = "assets/icons/pizza_icon.svg";
+
+  /// Assets for assetsIconsPlateFood
+  /// assets/icons/plate_food.png
+  static const String assetsIconsPlateFood = "assets/icons/plate_food.png";
 
   /// Assets for assetsIconsRestaurantLocationIcon
   /// assets/icons/Restaurant_Location_icon.svg
