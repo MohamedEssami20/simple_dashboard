@@ -18,6 +18,8 @@ class CategoryItem extends StatelessWidget {
         decoration: ShapeDecoration(
           color: Constant.primaryColor,
           shape: RoundedRectangleBorder(
+            side: const BorderSide(
+                color: Color.fromARGB(255, 212, 209, 213), width: 0.8),
             borderRadius: BorderRadius.circular(16),
           ),
         ),
