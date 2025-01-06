@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'header.dart';
+import 'recent_order_item.dart';
 
 class RecentOrder extends StatelessWidget {
   const RecentOrder({super.key});
@@ -15,6 +16,7 @@ class RecentOrder extends StatelessWidget {
         SizedBox(
           height: 24,
         ),
+        RecentOrderItem(),
       ],
     );
   }
