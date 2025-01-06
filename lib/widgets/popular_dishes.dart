@@ -17,7 +17,6 @@ class PopularDishes extends StatelessWidget {
         SizedBox(
           height: 24,
         ),
-        PopularDishesItem(),
       ],
     );
   }

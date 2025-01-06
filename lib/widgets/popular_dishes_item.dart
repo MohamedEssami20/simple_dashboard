@@ -1,12 +1,13 @@
-import 'package:dashboard_two/helper/assets.dart';
+
+import 'package:dashboard_two/models/popular_dishes_model.dart';
 import 'package:flutter/material.dart';
 import '../helper/constant.dart';
 import 'popular_dishes_header.dart';
 import 'popular_dishes_info.dart';
 
 class PopularDishesItem extends StatelessWidget {
-  const PopularDishesItem({super.key});
-
+  const PopularDishesItem({super.key, required this.popularDishesModel});
+  final PopularDishesModel popularDishesModel;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -17,7 +18,7 @@ class PopularDishesItem extends StatelessWidget {
       child: Column(
         children: [
           const PopularDishesHeader(),
-          Image.asset(Assets.assetsIconsFishBurger),
+          Image.asset(popularDishesModel.image),
           Padding(
             padding: const EdgeInsets.only(left: 30),
             child: Row(
@@ -36,10 +37,9 @@ class PopularDishesItem extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 8),
-          const PopularDishesInfo(),
+           PopularDishesInfo(popularDishesModel: popularDishesModel,),
         ],
       ),
     );
   }
 }
-

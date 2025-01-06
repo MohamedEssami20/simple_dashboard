@@ -1,11 +1,12 @@
+import 'package:dashboard_two/models/popular_dishes_model.dart';
 import 'package:flutter/material.dart';
 
 import '../helper/constant.dart';
 import '../helper/font_styles.dart';
 
 class PopularDishesInfo extends StatelessWidget {
-  const PopularDishesInfo({super.key});
-
+  const PopularDishesInfo({super.key, required this.popularDishesModel});
+  final PopularDishesModel popularDishesModel;
   @override
   Widget build(BuildContext context) {
     return ListTile(
@@ -14,7 +15,7 @@ class PopularDishesInfo extends StatelessWidget {
       ),
       isThreeLine: true,
       title: Text(
-        'Fish Burger',
+        popularDishesModel.title,
         style: FontStyles().medium18(context).copyWith(
               color: Constant.black,
             ),
@@ -29,7 +30,7 @@ class PopularDishesInfo extends StatelessWidget {
                   ),
             ),
             TextSpan(
-              text: '5.59',
+              text: popularDishesModel.price.toString(),
               style: FontStyles().bold24(context).copyWith(
                     color: Constant.black,
                   ),
