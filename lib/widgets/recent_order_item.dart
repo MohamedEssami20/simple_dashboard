@@ -1,11 +1,12 @@
-import 'package:dashboard_two/helper/assets.dart';
+
+import 'package:dashboard_two/models/recent_order_model.dart';
 import 'package:flutter/material.dart';
 import '../helper/constant.dart';
 import '../helper/font_styles.dart';
 
 class RecentOrderItem extends StatelessWidget {
-  const RecentOrderItem({super.key});
-
+  const RecentOrderItem({super.key, required this.recentOrderModel});
+  final RecentOrderModel recentOrderModel;
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
@@ -22,10 +23,10 @@ class RecentOrderItem extends StatelessWidget {
                 Icon(Icons.favorite_border_outlined),
               ],
             ),
-            Image.asset(Assets.assetsIconsPizza1),
+            Image.asset(recentOrderModel.image),
             const SizedBox(height: 8),
             Text(
-              'Fish Burger',
+              recentOrderModel.title,
               textAlign: TextAlign.center,
               style: FontStyles().medium18(context).copyWith(
                     color: const Color(0xFF2E2E2E),
@@ -41,7 +42,7 @@ class RecentOrderItem extends StatelessWidget {
                             color: Constant.secondaryColor,
                           )),
                   TextSpan(
-                    text: '5.59',
+                    text: recentOrderModel.price,
                     style: FontStyles().bold24(context).copyWith(
                           color: Constant.black,
                         ),

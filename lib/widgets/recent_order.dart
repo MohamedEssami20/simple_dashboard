@@ -16,7 +16,6 @@ class RecentOrder extends StatelessWidget {
         SizedBox(
           height: 24,
         ),
-        RecentOrderItem(),
       ],
     );
   }
