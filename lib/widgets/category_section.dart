@@ -1,7 +1,10 @@
+import 'package:dashboard_two/helper/assets.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 import '../helper/constant.dart';
 import '../helper/font_styles.dart';
+import 'category_item.dart';
 
 class CategorySection extends StatelessWidget {
   const CategorySection({super.key});
@@ -36,7 +39,11 @@ class CategorySection extends StatelessWidget {
               ],
             ),
           ],
-        )
+        ),
+        const SizedBox(
+          height: 24,
+        ),
+        const CategoryItem()
       ],
     );
   }
