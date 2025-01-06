@@ -18,6 +18,10 @@ class Assets {
   /// assets/icons/banner_curve_top.svg
   static const String assetsIconsBannerCurveTop = "assets/icons/banner_curve_top.svg";
 
+  /// Assets for assetsIconsBeefBurger
+  /// assets/icons/beef_burger.png
+  static const String assetsIconsBeefBurger = "assets/icons/beef_burger.png";
+
   /// Assets for assetsIconsBillsIcon
   /// assets/icons/Bills_icon.svg
   static const String assetsIconsBillsIcon = "assets/icons/Bills_icon.svg";
@@ -25,6 +29,10 @@ class Assets {
   /// Assets for assetsIconsBurgerIcon
   /// assets/icons/Burger_icon.svg
   static const String assetsIconsBurgerIcon = "assets/icons/Burger_icon.svg";
+
+  /// Assets for assetsIconsCheeseBurger
+  /// assets/icons/cheese_burger.png
+  static const String assetsIconsCheeseBurger = "assets/icons/cheese_burger.png";
 
   /// Assets for assetsIconsChickenIcon
   /// assets/icons/Chicken_icon.svg
@@ -45,6 +53,10 @@ class Assets {
   /// Assets for assetsIconsFavoriteIcon
   /// assets/icons/favorite_icon.svg
   static const String assetsIconsFavoriteIcon = "assets/icons/favorite_icon.svg";
+
+  /// Assets for assetsIconsFishBurger
+  /// assets/icons/fish_burger.png
+  static const String assetsIconsFishBurger = "assets/icons/fish_burger.png";
 
   /// Assets for assetsIconsFishIcon
   /// assets/icons/Fish_icon.svg

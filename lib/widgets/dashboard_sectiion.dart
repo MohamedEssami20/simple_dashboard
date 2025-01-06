@@ -1,11 +1,8 @@
-import 'package:dashboard_two/helper/assets.dart';
 import 'package:dashboard_two/widgets/banner.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import '../helper/constant.dart';
-import '../helper/font_styles.dart';
 import 'category_section.dart';
 import 'dashboard_header.dart';
+import 'popular_dishes.dart';
 
 class DashboardSection extends StatelessWidget {
   const DashboardSection({super.key});
@@ -36,9 +33,12 @@ class DashboardSection extends StatelessWidget {
         SliverToBoxAdapter(
           child: SizedBox(
             height: 40,
-          ),),
+          ),
+        ),
+        SliverToBoxAdapter(
+          child: PopularDishes(),
+        ),
       ],
     );
   }
 }
-

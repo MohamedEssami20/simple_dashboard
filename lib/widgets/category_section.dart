@@ -1,47 +1,19 @@
-
 import 'package:flutter/material.dart';
-import '../helper/constant.dart';
-import '../helper/font_styles.dart';
 import 'category_items_list_view.dart';
+import 'header.dart';
 
 class CategorySection extends StatelessWidget {
   const CategorySection({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return const Column(
       children: [
-        Row(
-          children: [
-            Text(
-              'Category',
-              style: FontStyles().bold24(context).copyWith(
-                    color: Constant.black,
-                  ),
-            ),
-            const Spacer(),
-            Row(
-              children: [
-                Text(
-                  'View all',
-                  style: FontStyles().regular18(context).copyWith(
-                        color: Constant.secondaryColor,
-                      ),
-                ),
-                IconButton(
-                  onPressed: () {},
-                  icon: const Icon(Icons.arrow_forward_ios),
-                  color: Constant.secondaryColor,
-                  iconSize: 24,
-                ),
-              ],
-            ),
-          ],
-        ),
-        const SizedBox(
+        Header(title: 'Category',subTitle: "View all",),
+        SizedBox(
           height: 24,
         ),
-        const CategoryItemsListView(),
+        CategoryItemsListView(),
       ],
     );
   }
