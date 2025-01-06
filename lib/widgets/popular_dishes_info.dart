@@ -39,8 +39,8 @@ class PopularDishesInfo extends StatelessWidget {
         ),
       ),
       trailing: Container(
-        width: 48,
-        height: 48,
+        width: 40,
+        height: 40,
         alignment: Alignment.center,
         decoration: ShapeDecoration(
           color: Constant.secondaryColor,

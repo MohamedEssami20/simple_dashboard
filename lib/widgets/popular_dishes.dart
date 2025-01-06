@@ -1,7 +1,6 @@
-
 import 'package:flutter/material.dart';
 import 'header.dart';
-import 'popular_dishes_item.dart';
+import 'popular_dishes_items_list_view.dart';
 
 class PopularDishes extends StatelessWidget {
   const PopularDishes({super.key});
@@ -17,9 +16,9 @@ class PopularDishes extends StatelessWidget {
         SizedBox(
           height: 24,
         ),
+        PopularDishesListView(),
       ],
     );
   }
 }
-
 

@@ -1,4 +1,3 @@
-
 import 'package:dashboard_two/models/popular_dishes_model.dart';
 import 'package:flutter/material.dart';
 import '../helper/constant.dart';
@@ -10,35 +9,39 @@ class PopularDishesItem extends StatelessWidget {
   final PopularDishesModel popularDishesModel;
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.only(top: 30, right: 30),
-      width: 336,
-      height: 363,
-      color: Constant.primaryColor,
-      child: Column(
-        children: [
-          const PopularDishesHeader(),
-          Image.asset(popularDishesModel.image),
-          Padding(
-            padding: const EdgeInsets.only(left: 30),
-            child: Row(
-              children: List.generate(
-                5,
-                (index) {
-                  return const Padding(
-                    padding: EdgeInsets.only(right: 8),
-                    child: Icon(
-                      Icons.star,
-                      color: Constant.secondaryColor,
-                    ),
-                  );
-                },
+    return AspectRatio(
+      aspectRatio: 336 / 363,
+      child: Container(
+        padding: const EdgeInsets.only(top: 30, right: 30),
+        width: 336,
+        color: Constant.primaryColor,
+        child: Column(
+          children: [
+            const PopularDishesHeader(),
+            Image.asset(popularDishesModel.image),
+            Padding(
+              padding: const EdgeInsets.only(left: 30),
+              child: Row(
+                children: List.generate(
+                  5,
+                  (index) {
+                    return const Padding(
+                      padding: EdgeInsets.only(right: 8),
+                      child: Icon(
+                        Icons.star,
+                        color: Constant.secondaryColor,
+                      ),
+                    );
+                  },
+                ),
               ),
             ),
-          ),
-          const SizedBox(height: 8),
-           PopularDishesInfo(popularDishesModel: popularDishesModel,),
-        ],
+            const SizedBox(height: 8),
+            PopularDishesInfo(
+              popularDishesModel: popularDishesModel,
+            ),
+          ],
+        ),
       ),
     );
   }
