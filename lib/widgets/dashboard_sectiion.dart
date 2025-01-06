@@ -33,6 +33,10 @@ class DashboardSection extends StatelessWidget {
         SliverToBoxAdapter(
           child: CategorySection(),
         ),
+        SliverToBoxAdapter(
+          child: SizedBox(
+            height: 40,
+          ),),
       ],
     );
   }

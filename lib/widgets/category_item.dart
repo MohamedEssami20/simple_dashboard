@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-
-import '../helper/assets.dart';
 import '../helper/constant.dart';
 import '../helper/font_styles.dart';
 
 class CategoryItem extends StatelessWidget {
-  const CategoryItem({super.key});
-
+  const CategoryItem({
+    super.key,
+    required this.title,
+    required this.image,
+  });
+  final String title;
+  final String image;
   @override
   Widget build(BuildContext context) {
     return FittedBox(
@@ -28,12 +31,12 @@ class CategoryItem extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            SvgPicture.asset(Assets.assetsIconsBakedIcon),
+            SvgPicture.asset(image),
             const SizedBox(
               height: 16,
             ),
             Text(
-              'Baked',
+              title,
               style: FontStyles().regular18(context).copyWith(
                     color: const Color(0xFFA098AE),
                   ),
