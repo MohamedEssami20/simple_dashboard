@@ -30,6 +30,14 @@ class Assets {
   /// assets/icons/Burger_icon.svg
   static const String assetsIconsBurgerIcon = "assets/icons/Burger_icon.svg";
 
+  /// Assets for assetsIconsCardCurveBottom
+  /// assets/icons/card_curve_bottom.svg
+  static const String assetsIconsCardCurveBottom = "assets/icons/card_curve_bottom.svg";
+
+  /// Assets for assetsIconsCardCurveLeft
+  /// assets/icons/card_curve_left.svg
+  static const String assetsIconsCardCurveLeft = "assets/icons/card_curve_left.svg";
+
   /// Assets for assetsIconsCheeseBurger
   /// assets/icons/cheese_burger.png
   static const String assetsIconsCheeseBurger = "assets/icons/cheese_burger.png";
@@ -66,9 +74,21 @@ class Assets {
   /// assets/icons/image_woman.png
   static const String assetsIconsImageWoman = "assets/icons/image_woman.png";
 
+  /// Assets for assetsIconsIncomeIcon
+  /// assets/icons/Income_icon.svg
+  static const String assetsIconsIncomeIcon = "assets/icons/Income_icon.svg";
+
   /// Assets for assetsIconsMessageIcon
   /// assets/icons/message_icon.svg
   static const String assetsIconsMessageIcon = "assets/icons/message_icon.svg";
+
+  /// Assets for assetsIconsNotificationIcon
+  /// assets/icons/notification_icon.svg
+  static const String assetsIconsNotificationIcon = "assets/icons/notification_icon.svg";
+
+  /// Assets for assetsIconsOrderDiscussionIcon
+  /// assets/icons/Order_Discussion_icon.svg
+  static const String assetsIconsOrderDiscussionIcon = "assets/icons/Order_Discussion_icon.svg";
 
   /// Assets for assetsIconsOrderHistoryIcon
   /// assets/icons/order_history_icon.svg
@@ -90,6 +110,14 @@ class Assets {
   /// assets/icons/plate_food.png
   static const String assetsIconsPlateFood = "assets/icons/plate_food.png";
 
+  /// Assets for assetsIconsProfilePhoto
+  /// assets/icons/profile_photo.png
+  static const String assetsIconsProfilePhoto = "assets/icons/profile_photo.png";
+
+  /// Assets for assetsIconsProfitIcon
+  /// assets/icons/Profit_icon.svg
+  static const String assetsIconsProfitIcon = "assets/icons/Profit_icon.svg";
+
   /// Assets for assetsIconsRestaurantLocationIcon
   /// assets/icons/Restaurant_Location_icon.svg
   static const String assetsIconsRestaurantLocationIcon = "assets/icons/Restaurant_Location_icon.svg";
@@ -97,6 +125,10 @@ class Assets {
   /// Assets for assetsIconsSettingIcon
   /// assets/icons/Setting_icon.svg
   static const String assetsIconsSettingIcon = "assets/icons/Setting_icon.svg";
+
+  /// Assets for assetsIconsSettingsIcon
+  /// assets/icons/Settings_icon.svg
+  static const String assetsIconsSettingsIcon = "assets/icons/Settings_icon.svg";
 
   /// Assets for assetsIconsVectorDots
   /// assets/icons/Vector_dots.svg
