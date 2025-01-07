@@ -1,5 +1,6 @@
 import 'package:dashboard_two/widgets/custom_drawer.dart';
 import 'package:flutter/material.dart';
+import 'balance_section.dart';
 import 'dashboard_sectiion.dart';
 
 class DesktopLayoutView extends StatelessWidget {
@@ -7,13 +8,13 @@ class DesktopLayoutView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return const Row(
       children: [
-        const Expanded(
+        Expanded(
           flex: 2,
           child: CsutsomDrawer(),
         ),
-        const Expanded(
+        Expanded(
           flex: 6,
           child: Padding(
             padding: EdgeInsets.symmetric(
@@ -25,13 +26,9 @@ class DesktopLayoutView extends StatelessWidget {
         ),
         Expanded(
           flex: 2,
-          child: Container(
-            color: Colors.green,
-          ),
+          child: BalanceSection(),
         ),
       ],
     );
   }
 }
-
-
