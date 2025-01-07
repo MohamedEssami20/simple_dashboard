@@ -25,7 +25,7 @@ class DesktopLayoutView extends StatelessWidget {
           ),
         ),
         Expanded(
-          flex: 2,
+          flex: 3,
           child: BalanceSection(),
         ),
       ],

@@ -1,7 +1,7 @@
-import 'package:dashboard_two/helper/assets.dart';
+
 import 'package:dashboard_two/widgets/menue.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'balance_card.dart';
 
 class BalanceSection extends StatelessWidget {
   const BalanceSection({super.key});
@@ -16,13 +16,16 @@ class BalanceSection extends StatelessWidget {
       child: Padding(
         padding: EdgeInsets.only(left: 40, top: 56, right: 40),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Menue(),
-            SizedBox(height: 32,),
+            SizedBox(
+              height: 32,
+            ),
+            BalanceCard(),
           ],
         ),
       ),
     );
   }
 }
-
