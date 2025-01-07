@@ -4,6 +4,7 @@ import 'package:flutter_svg/svg.dart';
 
 import '../helper/assets.dart';
 import '../helper/constant.dart';
+import 'card_details.dart';
 
 class BalanceCard extends StatelessWidget {
   const BalanceCard({super.key});
@@ -20,37 +21,47 @@ class BalanceCard extends StatelessWidget {
                 color: Constant.black,
               ),
         ),
-        Container(
-          width: 375,
-          height: 165,
-          decoration: const BoxDecoration(
-            color: Color(0xFFF8B602),
-            borderRadius: BorderRadius.all(
-              Radius.circular(16),
+        AspectRatio(
+          aspectRatio: 375 / 165,
+          child: FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Container(
+              width: 375,
+              height: 165,
+              decoration: const BoxDecoration(
+                color: Color(0xFFF8B602),
+                borderRadius: BorderRadius.all(
+                  Radius.circular(16),
+                ),
+              ),
+              child: Stack(
+                children: [
+                  Positioned(
+                    left: 0,
+                    child: ClipRRect(
+                      borderRadius: const BorderRadius.only(
+                        topLeft: Radius.circular(16),
+                        bottomLeft: Radius.circular(16),
+                      ),
+                      child: SvgPicture.asset(Assets.assetsIconsCardCurveLeft),
+                    ),
+                  ),
+                  Positioned(
+                    bottom: 0,
+                    child: ClipRRect(
+                      borderRadius: const BorderRadius.only(
+                        bottomLeft: Radius.circular(16),
+                      ),
+                      child:
+                          SvgPicture.asset(Assets.assetsIconsCardCurveBottom),
+                    ),
+                  ),
+                  const Positioned.fill(
+                    child: CardDetails(),
+                  ),
+                ],
+              ),
             ),
-          ),
-          child: Stack(
-            children: [
-              Positioned(
-                left: 0,
-                child: ClipRRect(
-                  borderRadius: const BorderRadius.only(
-                    topLeft: Radius.circular(16),
-                    bottomLeft: Radius.circular(16),
-                  ),
-                  child: SvgPicture.asset(Assets.assetsIconsCardCurveLeft),
-                ),
-              ),
-              Positioned(
-                bottom: 0,
-                child: ClipRRect(
-                  borderRadius: const BorderRadius.only(
-                    bottomLeft: Radius.circular(16),
-                  ),
-                  child: SvgPicture.asset(Assets.assetsIconsCardCurveBottom),
-                ),
-              ),
-            ],
           ),
         ),
       ],
