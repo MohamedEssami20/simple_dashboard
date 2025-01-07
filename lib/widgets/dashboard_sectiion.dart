@@ -11,6 +11,7 @@ class DashboardSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const CustomScrollView(
+    
       slivers: [
         SliverToBoxAdapter(
           child: DashboardHeader(),
@@ -48,6 +49,6 @@ class DashboardSection extends StatelessWidget {
           child: RecentOrder(),
         ),
       ],
-    ); 
+    );
   }
 }
