@@ -1,4 +1,5 @@
 import 'package:dashboard_two/widgets/coupon_button.dart';
+import 'package:dashboard_two/widgets/custom_button.dart';
 import 'package:dashboard_two/widgets/menue.dart';
 import 'package:dashboard_two/widgets/order_menue_section.dart';
 import 'package:dashboard_two/widgets/total_price.dart';
@@ -53,7 +54,11 @@ class BalanceSection extends StatelessWidget {
               ),
               CouponButton(),
               SizedBox(
-                height: 40,
+                height: 32,
+              ),
+              CustomButton(),
+              SizedBox(
+                height: 20,
               ),
             ],
           ),
