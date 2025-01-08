@@ -1,3 +1,4 @@
+import 'package:dashboard_two/widgets/order_menue_item.dart';
 import 'package:flutter/material.dart';
 
 import '../helper/constant.dart';
@@ -18,6 +19,7 @@ class OrderMenueSection extends StatelessWidget {
                 color: Constant.black,
               ),
         ),
+        const OrderMenueItem(),
       ],
     );
   }
