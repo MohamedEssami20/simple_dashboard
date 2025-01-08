@@ -1,20 +1,22 @@
 import 'package:flutter/material.dart';
-
-import '../helper/assets.dart';
 import '../helper/constant.dart';
 import '../helper/font_styles.dart';
+import '../models/order_menue_model.dart';
 
 class OrderMenueItem extends StatelessWidget {
-  const OrderMenueItem({super.key});
-
+  const OrderMenueItem({super.key, required this.orderMenueModel});
+  final OrderMenueModel orderMenueModel;
   @override
   Widget build(BuildContext context) {
     return ListTile(
       minVerticalPadding: 4,
-      leading: const Image(
-        image: AssetImage(Assets.assetsIconsCheeseBurger),
+      contentPadding: const EdgeInsets.symmetric(vertical: 12),
+      leading: Image(
+        image: AssetImage(orderMenueModel.image),
+        width: 60,
+        height: 50,
       ),
-      title: const Text('Pepperoni Pizza'),
+      title: Text(orderMenueModel.title),
       subtitle: const Text('x1'),
       titleTextStyle: FontStyles().semiBold18(context).copyWith(
             color: Constant.black,

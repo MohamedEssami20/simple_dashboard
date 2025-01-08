@@ -16,23 +16,25 @@ class BalanceSection extends StatelessWidget {
       color: Colors.white,
       child: Padding(
         padding: EdgeInsets.only(left: 40, top: 56, right: 40),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Menue(),
-            SizedBox(
-              height: 32,
-            ),
-            BalanceCard(),
-            SizedBox(
-              height: 32,
-            ),
-            AddressDetails(),
-            SizedBox(
-              height: 32,
-            ),
-            OrderMenueSection(),
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Menue(),
+              SizedBox(
+                height: 32,
+              ),
+              BalanceCard(),
+              SizedBox(
+                height: 32,
+              ),
+              AddressDetails(),
+              SizedBox(
+                height: 32,
+              ),
+              OrderMenueSection(),
+            ],
+          ),
         ),
       ),
     );
