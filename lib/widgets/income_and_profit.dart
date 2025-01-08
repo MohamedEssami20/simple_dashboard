@@ -14,6 +14,8 @@ class IncomeAndProfit extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisSize: MainAxisSize.max,
       spacing: 16,
       children: [
         Container(
@@ -28,11 +30,14 @@ class IncomeAndProfit extends StatelessWidget {
             image,
           ),
         ),
-        Text(
-          title,
-          style: FontStyles().regular14(context).copyWith(
-                color: Colors.white,
-              ),
+        FittedBox(
+          fit: BoxFit.scaleDown,
+          child: Text(
+            title,
+            style: FontStyles().regular14(context).copyWith(
+                  color: Colors.white,
+                ),
+          ),
         ),
       ],
     );

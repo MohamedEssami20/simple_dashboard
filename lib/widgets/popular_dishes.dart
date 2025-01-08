@@ -21,4 +21,3 @@ class PopularDishes extends StatelessWidget {
     );
   }
 }
-

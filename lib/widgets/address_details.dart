@@ -22,17 +22,25 @@ class AddressDetails extends StatelessWidget {
         Row(
           spacing: 8,
           children: [
-            const Icon(Icons.location_on_outlined,
-                color: Constant.secondaryColor),
-            Text(
-              'Elm Street, 23',
-              style: FontStyles().bold18(context).copyWith(
-                    color: Constant.black,
-                  ),
+            const Expanded(
+              child: Icon(Icons.location_on_outlined,
+                  color: Constant.secondaryColor),
+            ),
+            Expanded(
+              flex: 3,
+              child: Text(
+                'Elm Street, 23',
+                style: FontStyles().bold18(context).copyWith(
+                      color: Constant.black,
+                    ),
+              ),
             ),
             const Spacer(),
-            const CustomShape(
-              title: "Change",
+            const Expanded(
+              flex: 2,
+              child: CustomShape(
+                title: "Change",
+              ),
             ),
           ],
         ),
@@ -49,14 +57,18 @@ class AddressDetails extends StatelessWidget {
           spacing: 16,
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            CustomShape(
-                title: "Add Details",
-                titleColor: Constant.black,
-                borderColor: Constant.black),
-            CustomShape(
-                title: "Add Note",
-                titleColor: Constant.black,
-                borderColor: Constant.black),
+            Expanded(
+              child: CustomShape(
+                  title: "Add Details",
+                  titleColor: Constant.black,
+                  borderColor: Constant.black),
+            ),
+            Expanded(
+              child: CustomShape(
+                  title: "Add Note",
+                  titleColor: Constant.black,
+                  borderColor: Constant.black),
+            ),
           ],
         ),
       ],

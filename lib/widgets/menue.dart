@@ -11,14 +11,22 @@ class Menue extends StatelessWidget {
     return Row(
       spacing: 10,
       children: [
-        SvgPicture.asset(Assets.assetsIconsOrderDiscussionIcon),
-        SvgPicture.asset(Assets.assetsIconsNotificationIcon),
-        SvgPicture.asset(
-          Assets.assetsIconsSettingIcon,
-          colorFilter: const ColorFilter.mode(Colors.black, BlendMode.srcIn),
+        Expanded(
+            child: SvgPicture.asset(Assets.assetsIconsOrderDiscussionIcon)),
+        Expanded(child: SvgPicture.asset(Assets.assetsIconsNotificationIcon)),
+        Expanded(
+          child: SvgPicture.asset(
+            Assets.assetsIconsSettingIcon,
+            colorFilter: const ColorFilter.mode(Colors.black, BlendMode.srcIn),
+          ),
         ),
         const Spacer(),
-        Image.asset(Assets.assetsIconsProfilePhoto),
+        Expanded(
+          child: Image.asset(
+            Assets.assetsIconsProfilePhoto,
+            fit: BoxFit.fill,
+          ),
+        ),
       ],
     );
   }

@@ -12,13 +12,13 @@ class CardDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 30),
-      child: SingleChildScrollView(
-        scrollDirection: Axis.horizontal,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.start,
-          spacing: 20,
-          children: [
-            Container(
+      child: Row(
+        mainAxisSize: MainAxisSize.max,
+        mainAxisAlignment: MainAxisAlignment.start,
+        spacing: 15,
+        children: [
+          Expanded(
+            child: Container(
               padding: const EdgeInsets.all(16),
               decoration: ShapeDecoration(
                 color: Colors.white,
@@ -31,13 +31,11 @@ class CardDetails extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  FittedBox(
-                    child: Text(
-                      'Balance',
-                      style: FontStyles().regular14(context).copyWith(
-                            color: Constant.black,
-                          ),
-                    ),
+                  Text(
+                    'Balance',
+                    style: FontStyles().regular14(context).copyWith(
+                          color: Constant.black,
+                        ),
                   ),
                   Text(
                     '\$12.000',
@@ -48,12 +46,12 @@ class CardDetails extends StatelessWidget {
                 ],
               ),
             ),
-            const IncomeAndProfit(
-                title: 'Top Up', image: Assets.assetsIconsIncomeIcon),
-            const IncomeAndProfit(
-                title: 'Transfer', image: Assets.assetsIconsProfitIcon),
-          ],
-        ),
+          ),
+          const IncomeAndProfit(
+              title: 'Top Up', image: Assets.assetsIconsIncomeIcon),
+          const IncomeAndProfit(
+              title: 'Transfer', image: Assets.assetsIconsProfitIcon),
+        ],
       ),
     );
   }

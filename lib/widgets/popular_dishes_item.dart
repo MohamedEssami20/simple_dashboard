@@ -10,10 +10,9 @@ class PopularDishesItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
-      aspectRatio: 336 / 363,
+      aspectRatio: 320 / 350,
       child: Container(
         padding: const EdgeInsets.only(top: 30, right: 30),
-        width: 336,
         color: Constant.primaryColor,
         child: Column(
           children: [
