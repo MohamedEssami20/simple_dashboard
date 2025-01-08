@@ -20,6 +20,7 @@ class AddressDetails extends StatelessWidget {
               ),
         ),
         Row(
+          spacing: 8,
           children: [
             const Icon(Icons.location_on_outlined,
                 color: Constant.secondaryColor),
@@ -34,7 +35,30 @@ class AddressDetails extends StatelessWidget {
               title: "Change",
             ),
           ],
-        )
+        ),
+        Text(
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. ',
+          style: FontStyles().regular14(context).copyWith(
+                color: const Color(0xFFA098AE),
+              ),
+        ),
+        const SizedBox(
+          height: 8,
+        ),
+        const Row(
+          spacing: 16,
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            CustomShape(
+                title: "Add Details",
+                titleColor: Constant.black,
+                borderColor: Constant.black),
+            CustomShape(
+                title: "Add Note",
+                titleColor: Constant.black,
+                borderColor: Constant.black),
+          ],
+        ),
       ],
     );
   }

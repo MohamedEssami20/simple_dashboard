@@ -133,5 +133,9 @@ class Assets {
   /// Assets for assetsIconsVectorDots
   /// assets/icons/Vector_dots.svg
   static const String assetsIconsVectorDots = "assets/icons/Vector_dots.svg";
+
+  /// Assets for assetsIconsVeganPizza
+  /// assets/icons/vegan_pizza.png
+  static const String assetsIconsVeganPizza = "assets/icons/vegan_pizza.png";
 }
 

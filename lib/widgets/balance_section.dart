@@ -1,4 +1,5 @@
 import 'package:dashboard_two/widgets/menue.dart';
+import 'package:dashboard_two/widgets/order_menue_section.dart';
 import 'package:flutter/material.dart';
 import 'address_details.dart';
 import 'balance_card.dart';
@@ -27,6 +28,10 @@ class BalanceSection extends StatelessWidget {
               height: 32,
             ),
             AddressDetails(),
+            SizedBox(
+              height: 32,
+            ),
+            OrderMenueSection(),
           ],
         ),
       ),
