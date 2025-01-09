@@ -9,50 +9,52 @@ class PopularDishesInfo extends StatelessWidget {
   final PopularDishesModel popularDishesModel;
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      contentPadding: const EdgeInsets.only(
-        left: 30,
-      ),
-      isThreeLine: true,
-      title: Text(
-        popularDishesModel.title,
-        style: FontStyles().medium18(context).copyWith(
-              color: Constant.black,
-            ),
-      ),
-      subtitle: Text.rich(
-        TextSpan(
-          children: [
-            TextSpan(
-              text: '\$',
-              style: FontStyles().bold24(context).copyWith(
-                    color: Constant.secondaryColor,
-                  ),
-            ),
-            TextSpan(
-              text: popularDishesModel.price.toString(),
-              style: FontStyles().bold24(context).copyWith(
-                    color: Constant.black,
-                  ),
-            ),
-          ],
+    return Expanded(
+      child: ListTile(
+        contentPadding: const EdgeInsets.only(
+          left: 30,
         ),
-      ),
-      trailing: Container(
-        width: 40,
-        height: 40,
-        alignment: Alignment.center,
-        decoration: ShapeDecoration(
-          color: Constant.secondaryColor,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(8),
+        isThreeLine: true,
+        title: Text(
+          popularDishesModel.title,
+          style: FontStyles().medium18(context).copyWith(
+                color: Constant.black,
+              ),
+        ),
+        subtitle: Text.rich(
+          TextSpan(
+            children: [
+              TextSpan(
+                text: '\$',
+                style: FontStyles().bold24(context).copyWith(
+                      color: Constant.secondaryColor,
+                    ),
+              ),
+              TextSpan(
+                text: popularDishesModel.price.toString(),
+                style: FontStyles().bold24(context).copyWith(
+                      color: Constant.black,
+                    ),
+              ),
+            ],
           ),
         ),
-        child: const Center(
-          child: Icon(
-            Icons.add,
-            color: Colors.white,
-            size: 24,
+        trailing: Container(
+          width: 40,
+          height: 40,
+          alignment: Alignment.center,
+          decoration: ShapeDecoration(
+            color: Constant.secondaryColor,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(8),
+            ),
+          ),
+          child: const Center(
+            child: Icon(
+              Icons.add,
+              color: Colors.white,
+              size: 24,
+            ),
           ),
         ),
       ),

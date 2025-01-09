@@ -5,6 +5,7 @@ import '../widgets/custom_app_bar.dart';
 import '../widgets/custom_drawer.dart';
 import '../widgets/custom_navigation_bar.dart';
 import '../widgets/desktop_layout_view.dart';
+import '../widgets/tablet_layout.dart';
 
 class DashboardView extends StatelessWidget {
   const DashboardView({super.key});
@@ -20,7 +21,7 @@ class DashboardView extends StatelessWidget {
         body: AdabtiveLayout(
           mobileLayout: (context) => const SizedBox(),
           desktopLayout: (context) => const DesktopLayoutView(),
-          tabletLayout: (context) => const SizedBox(),
+          tabletLayout: (context) => const TabletLayout(),
         ),
         bottomNavigationBar: screenWidth <= SizeConfig.tabletWidth
             ? const CustomBottomNavigationBar()

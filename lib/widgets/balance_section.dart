@@ -13,51 +13,53 @@ class BalanceSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Card(
-      shape: RoundedRectangleBorder(
+    return Card(
+      shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.all(Radius.zero),
       ),
       color: Colors.white,
       child: Padding(
-        padding: EdgeInsets.only(left: 40, top: 56, right: 40),
+        padding: const EdgeInsets.only(left: 40, top: 56, right: 40),
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Menue(),
-              SizedBox(
+              Visibility(
+                  visible: MediaQuery.sizeOf(context).width > 1000,
+                  child: const Menue()),
+              const SizedBox(
                 height: 32,
               ),
-              BalanceCard(),
-              SizedBox(
+              const BalanceCard(),
+              const SizedBox(
                 height: 32,
               ),
-              AddressDetails(),
-              SizedBox(
+              const AddressDetails(),
+              const SizedBox(
                 height: 32,
               ),
-              OrderMenueSection(),
-              Divider(
+              const OrderMenueSection(),
+              const Divider(
                 color: Color(0xFFDADADA),
                 thickness: 1,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 32,
               ),
-              ServicePrice(),
-              SizedBox(
+              const ServicePrice(),
+              const SizedBox(
                 height: 32,
               ),
-              TotalPrice(),
-              SizedBox(
+              const TotalPrice(),
+              const SizedBox(
                 height: 40,
               ),
-              CouponButton(),
-              SizedBox(
+              const CouponButton(),
+              const SizedBox(
                 height: 32,
               ),
-              CustomButton(),
-              SizedBox(
+              const CustomButton(),
+              const SizedBox(
                 height: 20,
               ),
             ],

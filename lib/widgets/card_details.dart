@@ -11,15 +11,15 @@ class CardDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 30),
+      padding: const EdgeInsets.symmetric(horizontal: 25),
       child: Row(
-        mainAxisSize: MainAxisSize.max,
+        mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.start,
         spacing: 15,
         children: [
           Expanded(
             child: Container(
-              padding: const EdgeInsets.all(16),
+              padding: const EdgeInsets.all(12),
               decoration: ShapeDecoration(
                 color: Colors.white,
                 shape: RoundedRectangleBorder(
@@ -37,11 +37,14 @@ class CardDetails extends StatelessWidget {
                           color: Constant.black,
                         ),
                   ),
-                  Text(
-                    '\$12.000',
-                    style: FontStyles().bold32(context).copyWith(
-                          color: Constant.black,
-                        ),
+                  FittedBox(
+                    fit: BoxFit.scaleDown,
+                    child: Text(
+                      '\$12.000',
+                      style: FontStyles().bold32(context).copyWith(
+                            color: Constant.black,
+                          ),
+                    ),
                   ),
                 ],
               ),
