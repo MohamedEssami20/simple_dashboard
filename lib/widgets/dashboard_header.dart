@@ -17,7 +17,9 @@ class DashboardHeader extends StatelessWidget {
                 color: const Color(0xFF2E2E2E),
               ),
         ),
-        const SizedBox(width: 200),
+        MediaQuery.sizeOf(context).width > 1000
+            ? const SizedBox(width: 200)
+            : const SizedBox(width: 30),
         const Expanded(child: CustomTextField()),
       ],
     );

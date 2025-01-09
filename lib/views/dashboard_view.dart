@@ -1,3 +1,4 @@
+import 'package:dashboard_two/widgets/mobile_layout.dart';
 import 'package:flutter/material.dart';
 import '../adabtive_layout.dart';
 import '../helper/size_config.dart';
@@ -19,7 +20,7 @@ class DashboardView extends StatelessWidget {
         appBar:
             screenWidth <= SizeConfig.tabletWidth ? const CustomAppBar() : null,
         body: AdabtiveLayout(
-          mobileLayout: (context) => const SizedBox(),
+          mobileLayout: (context) => const MobileLayout(),
           desktopLayout: (context) => const DesktopLayoutView(),
           tabletLayout: (context) => const TabletLayout(),
         ),
