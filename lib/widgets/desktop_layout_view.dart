@@ -12,7 +12,7 @@ class DesktopLayoutView extends StatelessWidget {
       children: [
         Expanded(
           flex: 2,
-          child: CsutsomDrawer(),
+          child: CustomDrawer(),
         ),
         Expanded(
           flex: 6,

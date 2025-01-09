@@ -14,6 +14,7 @@ class CustomBottomNavigationBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
+      elevation: 0.0,
       currentIndex: 0,
       onTap: onTap,
       items: <BottomNavigationBarItem>[
@@ -33,9 +34,12 @@ class CustomBottomNavigationBar extends StatelessWidget {
           label: 'Settings',
         ),
         BottomNavigationBarItem(
-            icon: Image.asset(
-              Assets.assetsIconsProfilePhoto,
-              fit: BoxFit.fill,
+            icon: ClipRRect(
+              borderRadius: BorderRadius.circular(60),
+              child: Image.asset(
+                Assets.assetsIconsProfilePhoto,
+                fit: BoxFit.fill,
+              ),
             ),
             label: "Profile"),
       ],
